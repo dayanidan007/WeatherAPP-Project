@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeaterApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadPage()">
+    <div id="top">
+    <h2>WeaterApp</h2>
+    <input type="text" placeholder="City" id="input">
+    <button id="btn">search</button>
+    </div>
+    <div id="postsCities"></div>
+    <h2>Saving Cities</h2>
+    <div id="postInload"></div>
+    
+
+    <script id="cities-template" type="text/x-handlebars-template">
+    <div class="city">
+     <div class="name">{{data.name}}</div>
+     <div class="text">{{data.temperature}} C </div>
+     <div class="text">{{data.condition}}</div>
+     <div class="text">{{data.updatedAt}}</div>     
+     <img src='{{data.conditionPic}}' rel="pic">
+     <button class="add" onclick="save('{{data.name}}')">save</button>
+    </div>
+    </script>
+   
+    <script id="loading-template" type="text/x-handlebars-template">
+    {{#each data}}
+    <div class="city">
+     <div class="name">{{name}}</div>
+     <div class="text">{{temperature}} C </div>
+     <div class="text">{{condition}}</div>
+     <div class="text">{{updatedAt}}</div>     
+     <img src='{{conditionPic}}' rel="pic">
+     <button id="rem" onclick="remove('{{name}}')">remove</button>
+     </div>
+    {{/each}}
+    </script>   
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="logic.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
