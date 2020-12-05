@@ -1,0 +1,36 @@
+
+body{
+    background-color: #3396d9;
+}
+
+#top{
+    background-image: url('https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/cloud/cumulus-cloud.jpg') ;
+
+}
+
+
+#input{
+    background-color: #3396d9;
+    color: black;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: #eee;
+}
+
+#postInload{
+    display: inline-flexbox;
+}
+.city{
+    margin: 5px 5px;
+    border: black solid 1px 1px 0.2px 0.2px;
+    background-color: #B0E0E6;
+}
+
+@media(max-width: 768px){
+    input{
+      display: block;
+    }
+  }
+  

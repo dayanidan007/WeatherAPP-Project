@@ -1,0 +1,20 @@
+{
+  "name": "weatherapp-project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.1",
+    "nodemon": "^2.0.6",
+    "request": "^2.88.2",
+    "urllib": "^2.36.1"
+  },
+  "description": ""
+}
